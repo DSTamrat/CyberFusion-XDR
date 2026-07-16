@@ -14,6 +14,21 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    # ---------------------------
+    # GITLEAKS SECRET SCANNING
+    # ---------------------------
+    - name: Install Gitleaks
+      run: |
+        curl -sSL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks-linux-amd64 -o gitleaks
+        chmod +x gitleaks
+
+    - name: Run Gitleaks (Secret Scanning)
+      run: |
+        ./gitleaks detect --source . --no-banner --redact
+
+    # ---------------------------
+    # PYTHON SETUP
+    # ---------------------------
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -25,10 +40,17 @@ jobs:
         pip install -r requirements.txt
         pip install bandit semgrep
 
+    # ---------------------------
+    # BANDIT SECURITY SCAN
+    # ---------------------------
     - name: Run Bandit (Python Security Scanner)
       run: |
         bandit -r . -ll -iii
 
+    # ---------------------------
+    # SEMGREP SECURITY SCAN
+    # ---------------------------
     - name: Run Semgrep (Multi-language Security Scanner)
       run: |
         semgrep ci
+
