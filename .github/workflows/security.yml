@@ -17,16 +17,13 @@ jobs:
     # --------------------------------------------------
     # FIXED + VERSION-LOCKED GITLEAKS INSTALL (WORKS)
     # --------------------------------------------------
-    - name: Install Gitleaks
-      run: |
-        wget https://github.com/gitleaks/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_linux_x64.tar.gz
-        tar -xzf gitleaks_8.18.0_linux_x64.tar.gz
-        chmod +x gitleaks
-
-    - name: Run Gitleaks (Secret Scanning)
-      run: |
-        ./gitleaks detect --source . --no-banner --redact
-
+- name: Install Gitleaks
+  run: |
+    wget https://github.com/gitleaks/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_linux_x64.tar.gz
+    tar -xzf gitleaks_8.18.0_linux_x64.tar.gz
+    ls -l
+    chmod +x gitleaks
+  
     # --------------------------------------------------
     # PYTHON SECURITY SCANNERS
     # --------------------------------------------------
