@@ -1,0 +1,6 @@
+timestamp,user,url,status_code
+2026-07-15T08:20:11,jdoe,https://github.com,200
+2026-07-15T08:21:22,jdoe,https://malicious-xyz.ru,403
+2026-07-15T08:22:33,admin,https://portal.azure.com,200
+2026-07-15T08:23:44,svc_backup,https://updates.server.com,200
+2026-07-15T08:24:55,jdoe,https://bad-domain.cn,403

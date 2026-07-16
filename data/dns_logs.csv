@@ -1,0 +1,6 @@
+timestamp,domain,src_ip
+2026-07-15T08:10:01,login.microsoftonline.com,10.0.0.15
+2026-07-15T08:10:05,update.windows.com,10.0.0.20
+2026-07-15T08:10:10,malicious-xyz.ru,10.0.0.50
+2026-07-15T08:10:15,cdn.cloudflare.com,10.0.0.77
+2026-07-15T08:10:20,bad-domain.cn,10.0.0.99

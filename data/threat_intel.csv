@@ -1,0 +1,6 @@
+indicator,type,severity
+malicious-xyz.ru,domain,high
+bad-domain.cn,domain,high
+185.199.108.153,ip,medium
+103.21.244.0,ip,medium
+evil-malware.exe,hash,critical
