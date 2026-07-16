@@ -1,6 +1,5 @@
-main.yml
-name: CyberFusion-XDR CI Pipeline
 
+name: CyberFusion-XDR CI Pipeline
 on:
   push:
     branches: [ "main" ]
