@@ -21,6 +21,38 @@
 <div class="main">
   <h1>👉 Risk Scoring</h1>
   <section>
+  <h2>Risk Scoring Engine Overview</h2>
+  <p>
+    The CyberFusion‑XDR risk engine calculates a dynamic risk score for every entity — users, hosts, 
+    applications, and network assets. Scores are derived from alert severity, anomaly frequency, 
+    behavioral deviations, and historical baselines.
+  </p>
+
+  <h3>How Risk Scores Are Computed</h3>
+  <ul>
+    <li>Alert severity weighting (Critical, High, Medium, Low)</li>
+    <li>Anomaly detection from behavioral analytics</li>
+    <li>MITRE ATT&CK technique mapping</li>
+    <li>Historical risk trends and baselines</li>
+    <li>Contextual enrichment (identity, device, geolocation)</li>
+  </ul>
+
+  <h3>Why Risk Scoring Matters</h3>
+  <p>
+    Risk scoring helps analysts prioritize investigations, reduce noise, and focus on high‑impact threats. 
+    It also supports automated response workflows and SOC triage.
+  </p>
+
+  <h3>Outputs</h3>
+  <ul>
+    <li>Entity risk score (0–100)</li>
+    <li>Risk category (Low, Moderate, High, Critical)</li>
+    <li>Top contributing factors</li>
+    <li>Recommended actions</li>
+  </ul>
+</section>
+
+  <section>
     <h2>Risk Score Breakdown</h2>
     <p>Risk scores are calculated using anomalies, alerts, and historical patterns.</p>
   </section>
