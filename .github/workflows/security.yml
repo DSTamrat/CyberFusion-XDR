@@ -18,10 +18,10 @@ jobs:
     # GITLEAKS SECRET SCANNING
     # ---------------------------
     - name: Install Gitleaks
-      run: |
-        curl -sSL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks-linux-amd64 -o gitleaks
-        chmod +x gitleaks
-
+  run: |
+    curl -sSL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks-linux-amd64.tar.gz -o gitleaks.tar.gz
+    tar -xzf gitleaks.tar.gz
+    chmod +x gitleaks
     - name: Run Gitleaks (Secret Scanning)
       run: |
         ./gitleaks detect --source . --no-banner --redact
